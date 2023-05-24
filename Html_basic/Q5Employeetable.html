@@ -1,0 +1,62 @@
+
+<html>
+    <header>
+        <title>EmployeeTable</title>
+    </header>
+    <body>
+        
+        </style>
+        <table bgcolor="pink" border="1" width="500px" height="600px">
+           
+            <tbody>
+                <tr>
+                   <td><label for="name">Name</label></td>
+                   <td><input type="text" name="name" id="name" required autofocus minlength="4"/></td>
+                </tr>
+                <tr>
+                    <td><label for="Ec">Employee code</label></td>
+                    <td><input type="text" name="Ec" id="Ec" required autofocus/></td>
+                </tr>
+                <tr>
+                    <td><label for="dept">Department</label></td>
+                    <td><p><input textarea type="radio" name="dept" id="'dept" value="Admin"/><label for="admin">Admin</label></p>
+                    <p><input type="radio" name="dept" id="dept" value="HR"/><label for="Hr">HR</label></p>              
+                    <p><input type="radio" name="dept" id="dept" value="Technical"/><label for="technical">Technical</label></p>
+                    <p><input type="radio" name="dept" id="dept" value="Accounts"/><label for="account">Accounts</label></td></p>
+                </tr>
+                <tr>
+                    <td><label for="Doj">Date Of joining</label></td>
+                    <td><input type="date" name="Doj" id="Doj" min="2018-01-01" max="2023-05-24"/>
+                    <!--<input type="text" name="Doj" id="Doj" value="dd"minlength="2" maxlength="2" length="2"/>/
+                        <input type="text" name="Doj" id="Doj" value="mm" minlength="2" maxlength="2"/>/
+                        <input type="text" name="Doj" id="Doj" value="yyyy"minlength="4" maxlength="4"/></td>-->
+                </tr>
+                <tr>
+                    <td><label for="add">Adress</label></td>
+                    <td><textarea name="add" id="add" rows="4" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Tpa">Training Programs Attended</label></td>
+                    <td><p><input type="checkbox" name="tpa" id="tpa" value="HTML/DHTML"/><label for="Html">HTML/DHTML</label></p>
+                        <p><input type="checkbox" name="tpa" id="tpa" value="java"/><label for="java">JAVA</label></p>
+                        <p><input type="checkbox" name="tpa" id="tpa" value="CLIENT SERVER"/><label for="java">CLIENT SERVER</label></p>
+                        <p><input type="checkbox" name="tpa" id="tpa" value=".NET"/><label for="java">.NET</label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="tpna">Training Programmes need to attend</label></td>
+                    <td><select><option value="JAVASCRIPT">JAVASCRIPT</option>
+                        <option value="JSTRUS">JSTRUS</option>
+                        <option value="NODEJS">NODEJS</option>
+                        <option value="REACT">REACT</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="send info">Send the information at</label></td>
+                    <td><a href="mailto:pradyumnpatil95@gmail.com">pradyumnpatil95@gmmail.com</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </body>
+</html>
