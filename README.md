@@ -5,4 +5,5 @@ this repository contains daily programming questions.
 daily array based problem solving for better logic development
 
 #Html basic practise questions
+assignment pdf contains questions of html codes
 
