@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+
+        <script>
+
+  function higherValue()
+  {
+     var a=document.getElementById("btn").value;
+     var b=document.getElementById("btn1").value; 
+     var c=document.getElementById("btn2").value;
+
+
+     if(a>b && a>c){
+      document.getElementById("mydiv").innerHTML=("a is greater")
+     }
+     else if(b>c && b>a){
+        document.getElementById("mydiv").innerHTML=("b is greater")
+     }
+     else{
+        document.getElementById("mydiv").innerHTML=("c is greater")
+     }
+
+
+  }
+
+        </script>
+    </head>
+    <body>
+       
+        number1:<input type="text"  id="btn" name="btn"><br>
+       
+        number2:<input type="text" id="btn1" name="btn1" ><br>
+      
+        number3:<input type="text" id="btn2" name="btn2"><br>
+       
+        <button type="button" id="sub" name="sub" onclick="higherValue()">highest</button>
+   
+
+    
+    </body>
+    <div id="mydiv">
+
+    </div>
+</html>

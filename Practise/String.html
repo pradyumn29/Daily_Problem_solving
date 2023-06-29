@@ -1,0 +1,80 @@
+<html>
+    <header>
+         <script>
+           function StringOp(){
+                      var a=document.getElementById('str').value;
+                      var b=document.getElementById('substr').value;
+                      var c=document.getElementById('rpl').value;
+
+                      var d=document.getElementsByName('str1');
+                       var ans;
+                      for(var i=0;i<d.length;i++)
+                      {
+                        if(d[i].checked)
+                        {
+                            var data=d[i].value;
+                        }
+                      }
+
+                      switch(data){
+
+                        case 'search':
+                            ans=a.search(b);
+                            break;
+                            
+                        case 'upper':
+                            ans=a.toUpperCase();
+                            break;
+
+                        case 'lower':
+                            ans=a.toLowerCase();
+                            break;
+
+                        case 'trim':
+                            ans=a.trim("");
+                            break;
+
+                        case 'concate':
+                            ans=a.concat(b);
+                            break;
+
+                        case 'replace':
+                          
+                            
+                            ans=a.replace(b,c);
+                        
+                            break;
+
+                       
+                      }
+                      document.getElementById('mydiv').innerHTML=ans;
+           }
+
+           function CheckedBox(){
+            var radio=document.getElementById('replace');
+            var textbox=document.getElementById('rpl');
+            if(radio.checked){
+                textbox.disabled=false;
+            }else{
+                textbox.disabled=true;
+            }
+           }
+
+         </script>
+    </header>
+    <body>
+        <fieldset>
+            <legend>String Manipulation</legend>
+            Enter String:<input type="text" id="str" name="str" ><br>
+            Enter SubString:<input type="text" id="substr" name="substr"><br>
+            Replace with String:<input type="text" id="rpl" name="rpl"><br>
+            <input type="radio" id="search" name="str1" value="search" onclick="StringOp()">Search Substring in Main String 
+            <input type="radio" id="upper" name="str1" value="upper" onclick="StringOp()">To Upper Case
+            <input type="radio" id="lower" name="str1" value="lower" onclick="StringOp()">To Lower case
+            <input type="radio" id="Trim" name="str1" value="trim" onclick="StringOp()">Trim Spaces
+            <input type="radio" id="concate" name="str1" value="concate" onclick="StringOp()">Concatenate
+            <input type="radio" id="replace" name="str1" value="replace" onclick="StringOp()">Replace
+        </fieldset>
+        <div id="mydiv"></div>
+    </body>
+</html>

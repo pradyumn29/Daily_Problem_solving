@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            function Calculate(){
+                var val=validate(document.getElementById('rad').value);
+
+                if(val){
+                    var r=parseInt(document.getElementById('rad').value);
+                          alert("in function");
+                    var area1=3.14*r*r;
+                    var circum1=2*3.14*r;
+
+                    document.getElementById('mydiv1').innerHTML="Area"+area1;
+                    document.getElementById('mydiv').innerHTML="Circumference "+circum1;
+
+                }
+            }
+
+            // function area(r){
+            //        return 3.14*r*r;
+            // }
+
+            // function circum(r){
+            //     return 2*3.14*r;
+            // }
+
+            function validate(r){
+                if( r==="" || isNaN(r))
+                {
+                    alert("invalid input");
+                    return false;
+                }
+                return true;
+               
+
+            }
+        </script>
+
+    </head>
+    <body>
+          <fieldset>
+            <legend>Circle</legend>
+           
+                Enter radius of circle:<input type="text" id="rad" name="rad"><br>
+                <button type="button" id="sub" name="sub" value="sub" onclick="Calculate()">Submit</button><br>
+           <div id="mydiv1"></div>
+            <div id="mydiv"></div>
+           
+          </fieldset>
+    </body>
+</html>

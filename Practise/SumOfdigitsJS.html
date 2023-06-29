@@ -1,0 +1,50 @@
+<html>
+    <header>
+        <script>
+        function Sum(){
+            var val=validate(document.getElementById('num').value);
+
+            if(val){
+                var num=parseInt(document.getElementById('num').value);
+                     alert("in function")
+                var digit=0;
+                var sum=0;
+
+                while(num>0){
+                    digit=num%10;
+                    sum=sum+digit;
+                    num=Math.floor(num/10);
+                }
+ 
+                 document.getElementById('mydiv').innerHTML="Sum of digits:"+sum;
+
+
+            }
+            
+        }
+        function validate(num){
+                alert("in validation")
+            if(num==="" && isNaN(num)){
+                return false;
+                alert("invalid number");
+            }else if(num<0 && num>1000){
+                alert("out of range");
+                return false;
+            }else{
+                return true;
+            }
+
+        }
+
+        </script>
+
+    </header>
+    <body>
+        <fieldset>
+            <legend>Sum of Digits</legend>
+            Enter A number:<input type="text" id="num" name="num"><br>
+            <input type="button" id="btn" name="btn" value="Sum of digits" onclick="Sum()">
+        </fieldset>
+        <div id="mydiv"></div>
+    </body>
+</html>

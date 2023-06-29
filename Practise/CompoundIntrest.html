@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            function Comp(){
+                var a=document.getElementById("p").value;
+                var b=document.getElementById("n").value;
+                var c=document.getElementById("r").value;
+                alert("in function");
+
+                var poe
+                var ans=2;
+
+
+
+                document.getElementById("mydiv").innerHTML="Compound interest is:"+ans;
+
+            }
+        </script>
+    </head>
+    <body>
+        p:<input type="text" id="p" name="p">
+        r:<input type="text" id="n" name="n">
+        n:<input type="text" id="r" name="r">
+
+        <button type="submit" id="sub" name="sub" onclick="Comp()">Compund Interest</button>
+    </body>
+    <div id="mydiv"></div>
+</html>
